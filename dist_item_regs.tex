@@ -1,0 +1,53 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(NJ)}&\multicolumn{1}{c}{(NJ)}&\multicolumn{1}{c}{(NJ)}&\multicolumn{1}{c}{(NY MSA)}\\
+                    &\multicolumn{1}{c}{$\Delta Ln(P_{feb-oct})$}&\multicolumn{1}{c}{$\Delta Ln(P_{feb-oct})$}&\multicolumn{1}{c}{$\Delta Ln(P_{oct-jul})$}&\multicolumn{1}{c}{$\Delta Ln(P_{feb-oct})$}\\
+\hline
+Constant ($ \alpha_0 $)           &     0.00261         &     0.00268         &   -0.000689         &     0.00198         \\
+                    &   (0.00145)         &   (0.00146)         &  (0.000873)         &   (0.00318)        \\
+        [1em]
+NYC ($ \alpha_1 $)     &    -0.00339\sym{*}  &    -0.00410\sym{*}  &     0.00218\sym{*}  &       -0.00589              \\
+                    &   (0.00160)         &   (0.00161)         &  (0.000961)         &                     (0.00329)   \\
+[1em]
+Distance   ($\alpha_2$)            &   0.0000454         &   0.0000683         &  -0.0000366         &                      0.000245         \\
+                    & (0.0000566)         & (0.0000568)         & (0.0000339)         &                     (0.000168)      \\
+%[1em]
+%ny=0 $\times$ dist\_nynj\_bord&           0         &           0         &           0         &                     \\
+%                    &         (.)         &         (.)         &         (.)         &                     \\
+[1em]
+NYC $\times$ Distance ($\alpha_3$)    &    0.000350\sym{***}&    0.000322\sym{***}&   0.0000461         &     0.000293                 \\
+                    & (0.0000678)         & (0.0000679)         & (0.0000405)         &                     (0.000177)   \\
+%Chain               &                     &    -0.00553\sym{*}  &    -0.00222         &                     \\
+%                    &                     &   (0.00243)         &   (0.00145)         &                     \\
+%[1em]
+%LS                  &                     &    -0.00383\sym{***}&    -0.00113\sym{*}  &                     \\
+%                    &                     &  (0.000907)         &  (0.000542)         &                     \\
+%[1em]
+%Employees           &                     &  -0.0000586         &   0.0000367         &                     \\
+%                    &                     & (0.0000472)         & (0.0000282)         &                     \\
+%[1em]
+%Sales               &                     &    2.48e-09\sym{***}&    1.82e-11         &                     \\
+%                    &                     &  (4.42e-10)         &  (2.64e-10)         &                     \\
+%[1em]
+%nyc                 &                     &                     &                     &    -0.00589         \\
+%                    &                     &                     &                     &   (0.00329)         \\
+%[1em]
+%dist\_nyny\_bord      &                     &                     &                     &    0.000245         \\
+%                    &                     &                     &                     &  (0.000168)         \\
+%[1em]
+%nyc=0 $\times$ dist\_nyny\_bord&                     &                     &                     &           0         \\
+%                    &                     &                     &                     &         (.)         \\
+%[1em]
+%nyc=1 $\times$ dist\_nyny\_bord&                     &                     &                     &    0.000293         \\
+%                    &                     &                     &                     &  (0.000177)         \\
+%[1em]
+ \\
+\hline
+Observations        &       80402         &       80402         &       80402         &       23368         \\
+\hline\hline
+%	\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+%	\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

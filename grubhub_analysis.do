@@ -53,20 +53,29 @@ drop if fastfood==1
 
 xtset full_id t
 
-reg ch_lnp mw_increase lag_mw_increase i.t i.group if price<50 ///
-	, cluster(rest_id) noconstant
+reg ch_lnp mw_increase lag_mw_increase   ///
+	i.t i.group  ///
+	, cluster(group) noconstant
+	
+reg ch_lnp mw_increase lag_mw_increase  chain ls employees sales ///
+	i.t i.group total_items  ///
+	, cluster(group) noconstant
+
 
 reg ch_lnp mw_increase lag_mw_increase chain ls employees sales ///
-	i.t i.group total_items if price<50 , cluster(rest_id) noconstant
-
+	i.t i.group total_items if group <7 ///
+	, cluster(group) noconstant
+	
 display _b[mw_increase]
 
 		 
 /////////////// basic regs //////////////
 eststo clear 
 
-eststo: quietly reg ch_lnp mw_increase , cluster(rest_id)
-
+eststo: quietly reg ch_lnp mw_increase lag_mw_increase chain ls employees sales ///
+	i.t i.group ///
+	, cluster(group) noconstant
+	
 eststo: quietly reg ch_lnp mw_increase  i.group , cluster(rest_id)
 
 eststo: quietly reg ch_lnp mw_increase i.group , cluster(rest_id)
@@ -87,8 +96,12 @@ eststo clear
 
 eststo: quietly reg ch_lnp mw_increase chain ls employees sales i.group,  ///
 		cluster(rest_id)
-eststo: quietly reg ch_lnp mw_increase chain ls employees sales i.group if general_category=="popular" , ///
-		cluster(rest_id)
+eststo: quietly 
+
+reg total_inc  lag_mw_increase chain ls employees sales ///
+	i.t i.group if general_category=="breakfast" ///
+	, cluster(group) noconstant  
+	
 eststo: quietly reg ch_lnp mw_increase chain ls employees sales i.group if general_category=="side" , ///
 		cluster(rest_id)
 eststo: quietly reg ch_lnp mw_increase  chain ls employees sales i.group if general_category=="sandwich" , ///
@@ -289,26 +302,35 @@ esttab using prob_category_group_regs.tex, se keep(mw_increase) replace label //
 /////////////// prob inc by category (Group and Rest FE) //////////////	
 eststo clear 
 
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="popular", ///
-		cluster(rest_id)
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="side", ///
-		cluster(rest_id)
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="sandwich", ///
-		cluster(rest_id)
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="pizza", ///
-		cluster(rest_id)
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id  if general_category=="entre", ///
-		cluster(rest_id)
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="dessert", ///
-		cluster(rest_id)
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="other", ///
-		cluster(rest_id)
+eststo: quietly reg ch_lnp mw_increase lag_mw_increase ///
+	i.group i.t sales employees ls chain total_items if general_category=="popular", ///
+		cluster(group)
+eststo: quietly reg ch_lnp mw_increase lag_mw_increase ///
+	i.group i.t sales employees ls chain total_items if general_category=="side", ///
+		cluster(group)
+eststo: quietly reg ch_lnp mw_increase lag_mw_increase ///
+	i.group i.t sales employees ls chain total_items if general_category=="sandwich", ///
+		cluster(group)
+eststo: quietly reg ch_lnp mw_increase lag_mw_increase ///
+	i.group i.t sales employees ls chain total_items if general_category=="pizza", ///
+		cluster(group)
+eststo: quietly reg ch_lnp mw_increase lag_mw_increase ///
+	i.group i.t sales employees ls chain total_items if general_category=="entre", ///
+		cluster(group)
+eststo: quietly reg ch_lnp mw_increase lag_mw_increase ///
+	i.group i.t sales employees ls chain total_items if general_category=="dessert", ///
+		cluster(group)
+eststo: quietly 
+reg ch_lnp mw_increase lag_mw_increase ///
+	i.group i.t sales employees ls chain total_items if general_category=="drink", ///
+		cluster(group)
 
-esttab using prob_category_rest_regs.tex, se keep(mw_increase) replace label ///
-	title(Prob of Price Increase Given a 1 Percent Minimum Wage Increase by ///
-			Item Category (Group FE) ) ///
-	coeflabels(mw_increase "Change Ln(MW)" sales Sales ls LS) ///
-	mtitles ("Popular" "Side" "Sandwich" "Pizza" "Entre" "Desert" "Other")
+esttab using "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_03.23.17\item_regs_cats_gh.tex", ///
+	se keep(mw_increase lag_mw_increase) replace label ///
+	coeflabels(mw_increase "$\Delta Ln(MW)$" ///
+	lag_mw_increase "$\Delta Ln(mw_kt-1)$" ///
+	sales Sales ls LS) ///
+	mtitles ("Popular" "Side" "Sandwich" "Pizza" "Entre" "Desert" "Drink")
 	
 	
 /////////////// prob by fs ls //////////////
@@ -328,9 +350,13 @@ eststo: quietly reg pr_inc mw_increase i.group i.rest_id if ls==1 , ///
 eststo: quietly reg pr_inc mw_increase i.group i.rest_id if ls==0 , ///
 		cluster(rest_id)
 
-esttab using prob_ls_fs_regs.tex, se keep(mw_increase) replace label ///
+esttab using prob_ls_fs_regs.tex, se keep(mw_increase lag_mw_increase) ///
+	replace label ///
 	title(Prob of Price Increase Given a 1 Percent Minimum Wage Increase by LS FS) ///
-	coeflabels(ch_lnp "Change Ln(P)" mw_increase "Change Ln(MW)" sales Sales ls LS) ///
+	coeflabels(ch_lnp "Change Ln(P)" ///
+	mw_increase "$\Delta Ln(mw_kt)$" ///
+	lag_mw_increase "$\Delta Ln(mw_kt-1)$" ///
+	sales Sales ls LS) ///
 	mtitles ("All" "LS" "FS" "All" "LS" "FS")
 		
 	
@@ -510,7 +536,7 @@ summarize pr_inc pr_dec if t==2
 // plots
 /////////////////////////////////////////////////////////////////
 
-twoway (lfitci total_inc lag_mw_increase if t==3), by(category) ///
+twoway (lfitci total_inc lag_mw_increase), by(category) ///
 	graphregion(color(white)) bgcolor(white)
 gr_edit .plotregion1.subtitle[1].text = {}
 gr_edit .plotregion1.subtitle[1].text.Arrpush Other	

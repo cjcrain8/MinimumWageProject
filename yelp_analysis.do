@@ -35,6 +35,7 @@ drop if ls==0 & fs==0
 /////////////////////////////////////////////////////////////////
 
 use "C:\Users\Chelsea\Documents\Research\MinWage\Data\Yelp\yelp_rest_level_merged_panel_data.dta", clear
+
 drop if fastfood==1
 xtset rest_id scrape
 
@@ -136,6 +137,8 @@ esttab using "C:\Users\Chelsea\Documents\AlumniSeminar\y_star_rest_regs.tex", //
 	sales Sales ls LS chain Chain star_4 "Stars_April" emps Employees) 
 	//mtitles ("All" "LS" "FS")
 
+binscatter total_ch_star lag_mw_increase
+	
 /////////////// star regs: by starting star //////////////
 eststo clear
 
@@ -182,23 +185,23 @@ esttab using "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_02.09.17\prob_re
 // regressions: item level
 /////////////////////////////////////////////////////////////////
 use "C:\Users\Chelsea\Documents\Research\MinWage\Data\Yelp\yelp_merged_panel_data.dta", clear
+
 drop if fastfood==1
 
 xtset full_id scrape
 
 eststo clear 
 
-eststo: quietly reg ch_lnp mw_increase lag_ch_lnp i.group i.rest_id
+eststo: quietly reg ch_lnp mw_increase lag_ch_lnp i.group 
 
 
 /////////////// basic regs //////////////
 eststo clear 
 
-eststo:  xtreg ch_lnp mw_increase lag_ch_lnp  , fe 
-eststo:  xtreg ch_lnp mw_increase lag_ch_lnp i.group 
-eststo:  xtreg ch_lnp mw_increase lag_ch_lnp i.group chain ///
-	emps sales 
-eststo:  xtreg ch_lnp mw_increase lag_ch_lnp i.group if eat24==1
+eststo:  xtreg ch_lnp mw_increase lag_mw_increase lag_ch_lnp i.group ///
+	i.scrape ls chain sales emps
+eststo:  xtreg ch_lnp mw_increase lag_mw_increase lag_ch_lnp i.group ///
+	i.scrape ls chain sales emps
 
 //eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp locationsalesvolumeactual ///
 				//	total_items i.category i.group , fe 
@@ -225,10 +228,11 @@ esttab using "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_02.09.17\y_regs.
 eststo clear 
 
 //eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group i.rest_id , fe if general_category=="popular"
-eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="side", fe 
-eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="sandwich", fe 
-eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="pizza" , fe 
-eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="entre" , fe 
+eststo: quietly xtreg ch_lnp mw_increase lag_mw_increase lag_ch_lnp i.group ///
+	i.scrape ls chain sales emps lag_ch_lnp i.group if general_category=="side"
+eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="sandwich"
+eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="pizza" 
+eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="entre"
 //eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="soup_sal" , fe 
 //eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="dessert", fe 
 //eststo: quietly xtreg ch_lnp mw_increase lag_ch_lnp i.group if general_category=="other", fe 
@@ -385,8 +389,10 @@ esttab using prob_category_group_regs.tex, se keep(mw_increase) replace label //
 /////////////// prob inc by category (Group and Rest FE) //////////////	
 eststo clear 
 
-eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="popular", ///
-		cluster(rest_id)
+eststo: quietly 
+reg ch_lnp mw_increase lag_mw_increase lag_ch_lnp i.group ///
+ i.scrape chain ls sales emps ///
+		if general_category=="drink", cluster(group)
 eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="side", ///
 		cluster(rest_id)
 eststo: quietly reg pr_inc mw_increase i.group i.rest_id if general_category=="sandwich", ///
@@ -487,17 +493,17 @@ twoway (kdensity exact_star if state=="NJ" & scrape==5) ///
 twoway (kdensity exact_star if state=="NJ" & scrape==6) ///
 (kdensity exact_star if state=="NY" & scrape==6), name(b)
 	
-twoway (kdensity exact_star if state=="NJ" & scrape==7) ///
-(kdensity exact_star if state=="NY" & scrape==7), name(c)
+twoway (kdensity exact_star if state=="NJ" & scrape==8) ///
+(kdensity exact_star if state=="NY" & scrape==8), name(c)
 
 //graph combine a b c
 
-graph drop a b 
+graph drop _all
 
 twoway  /// (kdensity exact_star if group==3 & scrape==4) ///
 /// (kdensity exact_star if group==3 & scrape==5) ///
-(kdensity exact_star if group==3 & scrape==6, lwidth(thick) lcolor(emidblue) ) ///
-(kdensity exact_star if group==3 & scrape==7, lwidth(thick) lcolor(cranberry)), ///
+(kdensity exact_star if group==3 & scrape==6 & chain==0 , lwidth(thick) lcolor(emidblue) ) ///
+(kdensity exact_star if group==3 & scrape==8 & chain==0, lwidth(thick) lcolor(cranberry)), ///
 xtitle("Exact Yelp Star Rating") ytitle("Density") ///
 graphregion(fcolor(white)) ///
 legend(label(1 "Oct '16") label(2 "Jan '17")) name(b) xsc(r(1 5))  ///
@@ -506,7 +512,7 @@ title("NYC Lg Non-Chain")
 twoway /// (kdensity exact_star if newarkmsa==1 &  fs==1 & emps > 10 & scrape==4) ///
 /// (kdensity exact_star if newarkmsa==1 &  fs==1 & emps > 10 & scrape==5) ///
 (kdensity exact_star if  newarkmsa==1  & emps > 10 & scrape==6, lwidth(thick) lcolor(emidblue)  ) ///
-(kdensity exact_star if newarkmsa==1 & emps >10 & scrape==7, lwidth(thick) lcolor(cranberry)) , ///
+(kdensity exact_star if newarkmsa==1 & emps >10 & scrape==8, lwidth(thick) lcolor(cranberry)) , ///
 xtitle("Exact Yelp Star Rating") ytitle("Density") ///
 graphregion(fcolor(white)) ///
 legend(label(1 "Oct '16") label(2 "Jan '17")) name(a) xsc(r(1 5)) ///
@@ -614,6 +620,10 @@ use "C:\Users\Chelsea\Documents\Research\MinWage\Data\Yelp\yelp_rest_level_merge
 use "C:\Users\Chelsea\Documents\Research\MinWage\Data\Yelp\yelp_merged_panel_data.dta", clear
 
 drop if fastfood==1
+
+sort full_id scrape
+by full_id: gen total_chlnp = ln_p[_n]-ln_p[_n-3]
+
 
 by group scrape, sort: egen mean_ch_lnp = mean(ch_lnp)
 by group scrape, sort: egen sd_ch_lnp = sd(ch_lnp)
@@ -728,6 +738,131 @@ graph export "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_02.09.17\star_de
 // distances
 /////////////////////////////////////////////////////////////////
 
+// rest level
+gen ny = state=="NY"
+
+local dist = 25
+graph drop _all
+binscatter total_ch_star dist_nynj_bord if dist_nynj_bord<`dist' ///
+	& dist_nynj_bord >-	`dist'-5 , by(ny) ///
+	nquantiles(80) name(a)
+	
+	
+reg total_ch_star  ny dist_nynj_bord ny#c.dist_nynj_bord chain ls emps sales ///
+	if dist_nynj_bord <25 & dist_nynj_bord>-30
+	
+// item level
+
+
+
+local dist = 1500
+graph drop _all
+binscatter ln_p dist_nynj_bord if dist_nynj_bord<`dist' ///
+	& dist_nynj_bord >-	`dist' & scrape==5, by(nj) ///
+	nquantiles(50) name(a)
+binscatter ln_p dist_nynj_bord if dist_nynj_bord<`dist' ///
+	& dist_nynj_bord >-	`dist' & scrape==6, by(nj) ///
+	nquantiles(50) name(b)
+binscatter ln_p dist_nynj_bord if dist_nynj_bord<`dist' ///
+	& dist_nynj_bord >-	`dist' & scrape==7, by(nj) ///
+	nquantiles(50) name(c)
+binscatter ln_p dist_nynj_bord if dist_nynj_bord<`dist' ///
+	& dist_nynj_bord >-	`dist' & scrape==8, by(nj) ///
+	nquantiles(50) name(d)
+	
+graph combine a b c d 
+graph export "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_03.23.17\price_dist_nynj.pdf", as(pdf) replace
+
+///////////// main distance graph ////////////////////
+local dist = 25
+binscatter total_chlnp dist_nynj_bord if dist_nynj_bord<`dist' ///
+	& dist_nynj_bord >-	`dist'-10 & scrape==8, by(ny) nquantiles(60) ///
+	graphregion(fcolor(white)) title("Border Effects:" ///
+	"Price Pass Through By Distance to NJ/NY Border") ///
+	xtitle("Distance from NJ/NY Border") ///
+	xlabel(-30(10)20) ///
+	ytitle("%Change(P): Oct to Feb") ///
+	ylabel(-.005(.005).025) ///
+	legend(label( 1 "New Jersey") ///
+		label(2 "New York"))
+	
+graph export "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_03.23.17\total_pricechange_dist_nynj.pdf", as(pdf) replace
+
+
+//////////// distance regs //////////////////////
+eststo clear
+eststo: quietly
+
+reg total_ch  ny dist_nynj_bord ny#c.dist_nynj_bord ///
+	if dist_nynj_bord <25 & dist_nynj_bord>-35 
+
+reg total_ch  ny dist_nynj_bord ny#c.dist_nynj_bord ///
+	d2 ny#c.d2 ///
+	if dist_nynj_bord <25 & dist_nynj_bord>-35
+	
+eststo: quietly reg total_ch  ny dist_nynj_bord ny#c.dist_nynj_bord chain ls emps sales ///
+	if dist_nynj_bord <25 & dist_nynj_bord>-35
+
+//july to october: want to be non-significant
+eststo: quietly reg ch_lnp  ny dist_nynj_bord ny#c.dist_nynj_bord chain ls emps sales ///
+	if dist_nynj_bord <25 & dist_nynj_bord>-35	& scrape==6	
+
+esttab using "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_03.23.17\dist_item_regs.tex", ///
+	se replace label  ///
+	coeflabels(total_ch "$ \Delta Ln(P_{oct-feb}) $" ///
+		ny "\textbf{1}(NY)" ///
+		dist_nynj_bord "Distance" ///
+		ny#c.dist_nynj_bord "\textbf{1}(NY)*Distance" ///
+		chain "Chain" ///
+		ls "LS" ///
+		emps "Employees" ///
+		sales "Sales" ///
+		_cons "Constant" ) ///
+	mtitles("$\Delta Ln(P_{oct-feb})$" "$\Delta Ln(P_{oct-feb})$" "$\Delta Ln(P_{jul-oct})$" )
+		
+		
+local dist = 1500
+graph drop _all
+
+twoway (lfitci ln_p dist_nynj_bord if scrape==5 & state=="NY" ///
+	& dist_nynj_bord<`dist' ) ///
+	(lfitci ln_p  dist_nynj_bord if scrape==5 ///
+	& newarkmsa==1 & dist_nynj_bord>-`dist'), name(a)
+	
+twoway (lfitci ln_p  dist_nynj_bord if scrape==6 & state=="NY" ///
+	& dist_nynj_bord<`dist' ) ///
+	(lfitci ln_p  dist_nynj_bord if scrape==6 ///
+	& newarkmsa==1 & dist_nynj_bord>-`dist'), name(b)
+	
+twoway (lfitci ln_p  dist_nynj_bord if scrape==7 & state=="NY" ///
+	& dist_nynj_bord<`dist' ) ///
+	(lfitci ln_p  dist_nynj_bord if scrape==7 ///
+	& newarkmsa==1 & dist_nynj_bord>-`dist'), name(c)
+	
+twoway (lfitci ln_p  dist_nynj_bord if scrape==8 & state=="NY" ///
+	& dist_nynj_bord<`dist' ) ///
+	(lfitci ln_p  dist_nynj_bord if scrape==8 ///
+	& newarkmsa==1 & dist_nynj_bord>-`dist'), name(d)
+	
+graph combine a b c d 
+graph export "C:\Users\Chelsea\Documents\AppliedSeminar\MinWage_03.23.17\price_dist_nynj.pdf", as(pdf) replace
+
+/*	
+gen nj = dist_nynj_bord<0	
+reg ln_p  nj dist_nynj_bord nj#c.dist_nynj_bord, noconstant 
+reg ln_p  nj dist_nynj_bord nj#c.dist_nynj_bord chain ls emps sales, noconstant 
+*/
+
+	
+kdensity dist_nynj_bord if (scrape==8 & ///
+		group==4 & dist_nynj_bord<1500 & ///
+		mw_inc_comp_l==.0071999999) | ///
+		(scrape==8 & newarkmsa==1 & dist_nynj_bord>-1500)
+	
+	
+scrape==5 & group==4 ///
+	& dist_nynj_bord<1500 & mw_inc_comp_l==.0071999999	
+	
 collapse (mean) av_ch_p, by (rest_id scrape group dist_nynj_bord newark)
 
 
@@ -760,7 +895,34 @@ twoway (lfitci ch_lnp time_l if str_inc_l==".0072" & ///
 	
 	
 	
+twoway (lfitci total_chlnp lag_mw_increase if category!=8), by(category) ///
+	graphregion(color(white)) bgcolor(white) ///
+	ysc(r(-.001(.005).008))
 	
+gr_edit .plotregion1.subtitle[1].text = {}
+gr_edit .plotregion1.subtitle[1].text.Arrpush Other	
+gr_edit .plotregion1.subtitle[2].text = {}
+gr_edit .plotregion1.subtitle[2].text.Arrpush Breakfast	
+gr_edit .plotregion1.subtitle[3].text = {}
+gr_edit .plotregion1.subtitle[3].text.Arrpush Appetizer	
+gr_edit .plotregion1.subtitle[4].text = {}
+gr_edit .plotregion1.subtitle[4].text.Arrpush Side	
+gr_edit .plotregion1.subtitle[5].text = {}
+gr_edit .plotregion1.subtitle[5].text.Arrpush Soup/Sal	
+gr_edit .plotregion1.subtitle[6].text = {}
+gr_edit .plotregion1.subtitle[6].text.Arrpush Sandwich	
+gr_edit .plotregion1.subtitle[7].text = {}
+gr_edit .plotregion1.subtitle[7].text.Arrpush Pizza	
+gr_edit .plotregion1.subtitle[8].text = {}
+gr_edit .plotregion1.subtitle[8].text.Arrpush Entre	
+gr_edit .plotregion1.subtitle[9].text = {}
+gr_edit .plotregion1.subtitle[9].text.Arrpush Kids	
+gr_edit .plotregion1.subtitle[10].text = {}
+gr_edit .plotregion1.subtitle[10].text.Arrpush Dessert
+gr_edit .plotregion1.subtitle[11].text = {}
+gr_edit .plotregion1.subtitle[11].text.Arrpush Drink
+gr_edit .plotregion1.subtitle[12].text = {}
+gr_edit .plotregion1.subtitle[12].text.Arrpush  Popular	
 	
 	
 	

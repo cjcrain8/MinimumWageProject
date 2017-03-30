@@ -1,0 +1,24 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+& \multicolumn{2}{c}{Yelp} & \multicolumn{3}{c}{Grubhub} \\
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}\\
+%                    &\multicolumn{1}{c}{Yelp}&\multicolumn{1}{c}{Yelp}&\multicolumn{1}{c}{GH}&\multicolumn{1}{c}{GH}&\multicolumn{1}{c}{GH}\\
+\hline
+$\Delta Ln(mw_{kt}) $&      0.0111\sym{***}&      0.0105\sym{***}&     0.00988\sym{***}&      0.0164\sym{***}&                     \\
+                    &   (0.00103)         &   (0.00189)         &   (0.00125)         &   (0.00255)         &                     \\
+[1em]
+$\Delta Ln(mw_{kt-1}) $&     0.00928\sym{**} &     0.00864\sym{***}&      0.0214\sym{**} &      0.0278\sym{**} &      0.0404\sym{***}\\
+                    &   (0.00262)         &   (0.00171)         &   (0.00560)         &   (0.00652)         &   (0.00228)         \\
+[1em]
+$\Delta Ln(p_{it-1}$)&     -0.0506\sym{**} &     -0.0511\sym{**} &                     &                     &                     \\
+                    &    (0.0134)         &    (0.0134)         &                     &                     &                     \\
+\hline
+Controls & No & Yes & No & Yes & Yes \\
+Observations        &     1165918         &     1165918         &     1273357         &     1273357         &      636660         \\
+\hline\hline
+%\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+%\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
