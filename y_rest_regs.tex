@@ -1,0 +1,31 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+&\multicolumn{4}{c}{Yelp}&\multicolumn{1}{c}{Eat24} &\multicolumn{3}{c}{Grubhub} \\
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}\\
+                  %  &\multicolumn{1}{c}{ch\_av\_p}&\multicolumn{1}{c}{ch\_av\_p}&\multicolumn{1}{c}{ch\_av\_p}&\multicolumn{1}{c}{ch\_av\_p}&\multicolumn{1}{c}{ch\_av\_p}\\
+\hline
+$\Delta Ln(mw_{kt}) $&      0.0201\sym{*}  &      0.0264\sym{**} &      0.0264\sym{**} &      0.0264\sym{*}  &      0.0411      &      0.0116     &      0.0224         &      0.0270      \\
+                    &   (0.00934)         &    (0.0102)         &    (0.0102)         &    (0.0107)         &    (0.0276)      &    (0.0215)         &    (0.0330)         &    (0.0363)        \\
+[1em]
+Chain               &                     &                     &     -0.0204\sym{**} &                     &                     &                     &                     &    -0.00578    \\
+                    &                     &                     &   (0.00645)         &                     &                       &                     &                     &    (0.0221)    \\
+[1em]
+Employees           &                     &                     &  -0.0000270         &                     &                     &                     &                     &   -0.000384  \\
+                    &                     &                     & (0.0000508)         &                     &                      &                     &                     &  (0.000205)        \\
+[1em]
+Sales               &                     &                     &   -3.27e-10         &                     &                     &                     &                     &    3.75e-09  \\
+                    &                     &                     &  (5.78e-10)         &                     &                      &                     &                     &  (2.06e-09)   \\
+[1em]
+LS                  &                     &                     &    -0.00163         &                     &                     &                     &                     &    -0.00766    \\
+                    &                     &                     &   (0.00280)         &                     &                      &                     &                     &   (0.00719)  \\
+\hline
+Group FE        &       No         &       Yes         &       Yes         &       No         &        No         & No & Yes & Yes\\
+Rest. FE        &       No         &       No         &       No         &       Yes         &        Yes        & No & No & No\\
+Observations        &       23502         &       23502         &       23502         &       23502         &        5051       &        5366         &        5364         &        5364        \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
