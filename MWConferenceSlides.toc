@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Background \& Policies}{3}{0}{1}
+\beamer@sectionintoc {2}{Data}{7}{0}{2}
+\beamer@sectionintoc {3}{Price Pass Through}{11}{0}{3}
+\beamer@sectionintoc {4}{Quality}{15}{0}{4}
+\beamer@sectionintoc {5}{Border Effects}{17}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{22}{0}{6}

@@ -1,0 +1,40 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{5}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+                    &        Yelp         &     Jul-Oct         &        NYNY         &          GH         &        NYNY         \\
+\hline
+\textbf{1}(NY)      &      0.0166         &    -0.00427         &                     &     -0.0398\sym{**} &                     \\
+                    &    (0.0188)         &    (0.0140)         &                     &    (0.0160)         &                     \\
+[1em]
+Distance            &    -0.00157         &   -0.000127         &                     &     0.00135\sym{*}  &                     \\
+                    &   (0.00106)         &  (0.000791)         &                     &  (0.000796)         &                     \\
+[1em]
+ny=0 $\times$ dist\_nynj\_bord&           0         &           0         &                     &           0         &                     \\
+                    &         (.)         &         (.)         &                     &         (.)         &                     \\
+[1em]
+ny=1 $\times$ dist\_nynj\_bord&     0.00265\sym{*}  &    0.000817         &                     &     0.00173         &                     \\
+                    &   (0.00136)         &   (0.00101)         &                     &   (0.00130)         &                     \\
+[1em]
+nyc                 &                     &                     &    -0.00712         &                     &    -0.00839         \\
+                    &                     &                     &    (0.0198)         &                     &    (0.0142)         \\
+[1em]
+dist\_nyny\_bord      &                     &                     &   -0.000131         &                     &    0.000344         \\
+                    &                     &                     &  (0.000625)         &                     &  (0.000553)         \\
+[1em]
+nyc=0 $\times$ dist\_nyny\_bord&                     &                     &           0         &                     &           0         \\
+                    &                     &                     &         (.)         &                     &         (.)         \\
+[1em]
+nyc=1 $\times$ dist\_nyny\_bord&                     &                     &    0.000671         &                     &    0.000259         \\
+                    &                     &                     &   (0.00203)         &                     &   (0.00142)         \\
+[1em]
+Constant            &     -0.0171         &     0.00202         &     0.00644         &      0.0262\sym{**} &      0.0146\sym{**} \\
+                    &    (0.0172)         &    (0.0128)         &   (0.00848)         &    (0.0130)         &   (0.00704)         \\
+\hline
+Observations        &         896         &         896         &         439         &         499         &         184         \\
+\hline\hline
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<.10\), \sym{**} \(p<.05\), \sym{***} \(p<.001\)}\\
+\end{tabular}
+}

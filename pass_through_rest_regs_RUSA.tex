@@ -1,0 +1,37 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{c*{5}{c}}
+\hline\hline
+					& \multicolumn{3}{c}{Yelp} & \multicolumn{2}{c}{Grubhub} \\ \cline{2-4} \cline{5-6}
+                   % &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         \\
+                    &        All         &      Cntrls         &      Change         &        All         &        Cntrls        \\
+\hline
+ $ Jul-Oct $        &       0.183\sym{***}&       0.173\sym{*}  &       0.398         &                     &                     \\
+                    &    (0.0317)         &    (0.0808)         &     (0.244)         &                     &                     \\
+[1em]
+ $ Oct-Jan $        &       0.197\sym{**} &       0.189         &       0.355         &                     &                     \\
+                    &    (0.0644)         &     (0.104)         &     (0.373)         &                     &                     \\
+[1em]
+ $ Jan-Apr $        &       0.270\sym{***}&       0.244\sym{**} &       0.636\sym{**} &                     &                     \\
+                    &    (0.0424)         &    (0.0667)         &     (0.140)         &                     &                     \\
+[1em]
+ $ Dec-Jan $        &                     &                     &                     &       0.181\sym{***}&       0.207\sym{***}\\
+                    &                     &                     &                     &   (0.00969)         &    (0.0108)         \\
+[1em]
+ $ Jan-Feb $        &                     &                     &                     &       0.266\sym{***}&       0.273\sym{***}\\
+                    &                     &                     &                     &    (0.0400)         &    (0.0406)         \\
+[1em]
+ $ Feb-Mar $        &                     &                     &                     &       0.272\sym{***}&       0.312\sym{***}\\
+                    &                     &                     &                     &    (0.0210)         &    (0.0455)         \\
+[1em]
+ $ Mar-Apr $        &                     &                     &                     &       0.188\sym{**} &       0.193\sym{**} \\
+                    &                     &                     &                     &    (0.0587)         &    (0.0706)         \\
+\hline
+Total Pass Through & 0.65 & 0.606 & 1.39 & 0.91 & 0.985 \\
+N & 7283 & 6830 & 1786 & 3935 & 3561 \\
+N x T        &       29132         &       27320         &        7144         &       15740         &       14244         \\
+\hline\hline
+%\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\tiny \sym{*} \(p<.10\), \sym{**} \(p<.05\), \sym{***} \(p<.001\)}\\
+\end{tabular}
+}

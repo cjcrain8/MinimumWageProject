@@ -216,6 +216,36 @@ grubstat}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Iacono%
+, Krizek%
+\BCBL {}\ \BBA {} El-Geneidy%
+}{%
+Iacono%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+drivingtime}
+\APACinsertmetastar {%
+drivingtime}%
+\begin{APACrefauthors}%
+Iacono, M.%
+, Krizek, K.%
+\BCBL {}\ \BBA {} El-Geneidy, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Access to Destinations: How Close is Close Enough?
+  Estimating Accurate Distance Decay Functions for Multiple Modes and Different
+  Purposes} {Access to destinations: How close is close enough? estimating
+  accurate distance decay functions for multiple modes and different
+  purposes}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Access to Destinations Study}{}{4}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 \APACcitebtitle {An Introduction to Yelp Metrics}}{%
 \APACcitebtitle {An Introduction to Yelp Metrics}}{%
 {\protect \APACyear {2016}}%
@@ -229,53 +259,6 @@ yelpstat}%
 \APACrefYearMonthDay{2016}{}{}.
 \newblock
 \APACrefnote{https://www.yelp.com/factsheet}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Kennan%
-}{%
-Kennan%
-}{%
-{\protect \APACyear {1995}}%
-}]{%
-kennan1995elusive}
-\APACinsertmetastar {%
-kennan1995elusive}%
-\begin{APACrefauthors}%
-Kennan, J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1995}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The elusive effects of minimum wages} {The elusive
-  effects of minimum wages}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Economic Literature}{33}{4}{1950--1965}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Luca%
-}{%
-Luca%
-}{%
-{\protect \APACyear {2011}}%
-}]{%
-luca2011reviews}
-\APACinsertmetastar {%
-luca2011reviews}%
-\begin{APACrefauthors}%
-Luca, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2011}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Reviews, reputation, and revenue: The case of Yelp. com}
-  {Reviews, reputation, and revenue: The case of yelp. com}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Com (September 16, 2011). Harvard Business School NOM
-  Unit Working Paper}{}{12-016}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -298,8 +281,8 @@ MaCurdy, T.%
 \newblock
 \APACrefYearMonthDay{2000}{}{}.
 \newblock
-\APACrefbtitle {Increasing the Minimum Wa ge: C alifornia’s Winners and
-  Losers} {Increasing the minimum wa ge: C alifornia’s winners and losers}\
+\APACrefbtitle {Increasing the Minimum Wage: California’s Winners and Losers}
+  {Increasing the minimum wage: California’s winners and losers}\
   \APACbVolEdTR{}{\BTR{}}.
 \newblock
 \APACaddressInstitution{}{Working Paper. San Francisco: Public Policy Institute
@@ -352,50 +335,6 @@ nyff}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-News%
-}{%
-News%
-}{%
-{\protect \APACyear {2017}}%
-}]{%
-panobill}
-\APACinsertmetastar {%
-panobill}%
-\begin{APACrefauthors}%
-News, A\BPBI .%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2017}{}{}.
-\newblock
-\APACrefbtitle {Rep. Kim pushes for \$15 minimum wage increase.} {Rep. kim
-  pushes for \$15 minimum wage increase.}
-\newblock
-\APACrefnote{http://abc27.com/2017/01/24/rep-kim-pushes-for-15-minimum-wage-increase/}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-of Commerce%
-}{%
-of Commerce%
-}{%
-{\protect \APACyear {2002}}%
-}]{%
-census}
-\APACinsertmetastar {%
-census}%
-\begin{APACrefauthors}%
-of Commerce, U\BPBI D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2002}{}{}.
-\newblock
-\APACrefbtitle {Food Services and Drinking Places: 2002.} {Food services and
-  drinking places: 2002.}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Rebitzer%
 \ \BBA {} Taylor%
 }{%
@@ -423,24 +362,23 @@ Rebitzer, J\BPBI B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-{State of Connecticut General Assembly}%
+{State of Iowa General Assembly}%
 }{%
-{State of Connecticut General Assembly}%
+{State of Iowa General Assembly}%
 }{%
-{\protect \APACyear {2014}}%
+{\protect \APACyear {2017}}%
 }]{%
-ctbill}
+ia}
 \APACinsertmetastar {%
-ctbill}%
+ia}%
 \begin{APACrefauthors}%
-{State of Connecticut General Assembly}.%
+{State of Iowa General Assembly}.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2014}{}{}.
+\APACrefYearMonthDay{2017}{}{}.
 \newblock
-\APACrefbtitle {Senate Bill No. 32, Public Act No. 14-1.} {Senate bill no. 32,
-  public act no. 14-1.}
+\APACrefbtitle {House File 295.} {House file 295.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -485,24 +423,66 @@ njbill}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-{State of Vermont Department of Labor}%
+{UC Berkely Center for Labor Research and Education}%
 }{%
-{State of Vermont Department of Labor}%
+{UC Berkely Center for Labor Research and Education}%
 }{%
-{\protect \APACyear {2014}}%
+{\protect \APACyear {2016}}%
 }]{%
-vtbill}
+localmws}
 \APACinsertmetastar {%
-vtbill}%
+localmws}%
 \begin{APACrefauthors}%
-{State of Vermont Department of Labor}.%
+{UC Berkely Center for Labor Research and Education}.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2014}{}{}.
+\APACrefYearMonthDay{2016}{}{}.
 \newblock
-\APACrefbtitle {Vermont Minimum Wage Rules, Chapter 5, Title 21.} {Vermont
-  minimum wage rules, chapter 5, title 21.}
+\APACrefbtitle {Inventory of Local Minimum Wage Ordinances (Cities and
+  Counties).} {Inventory of local minimum wage ordinances (cities and
+  counties).}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{United States Department of Agriculture}%
+}{%
+{United States Department of Agriculture}%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+usda}
+\APACinsertmetastar {%
+usda}%
+\begin{APACrefauthors}%
+{United States Department of Agriculture}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {Food Expenditures.} {Food expenditures.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{U.S. Bureau of Labor Statistics}%
+}{%
+{U.S. Bureau of Labor Statistics}%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+charsmw}
+\APACinsertmetastar {%
+charsmw}%
+\begin{APACrefauthors}%
+{U.S. Bureau of Labor Statistics}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+\APACrefbtitle {Characteristics of Minimum Wage Workers, 2015.}
+  {Characteristics of minimum wage workers, 2015.}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

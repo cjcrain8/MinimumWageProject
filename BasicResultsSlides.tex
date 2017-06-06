@@ -1,0 +1,425 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This file is a template using the "beamer" package to create slides for a talk or presentation
+
+
+\documentclass[xcolor=table]{beamer}
+\usepackage{setspace}
+ \usepackage{tabularx} 
+\usepackage{arydshln}
+%\setbeamersize{text margin left=5pt,text margin right=5pt}
+%\definecolor{LRed}{rgb}{1,.8,.8}
+%\definecolor{MRed}{rgb}{1,.6,.6}
+\definecolor{HRed}{rgb}{1,.2,.2}
+\usepackage{mathtools}
+
+\setbeamertemplate{footline}[frame number]
+\mode<presentation>
+{
+  \usetheme{Darmstadt}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\usepackage{tikz}
+%\usepackage{chronosys}
+\usepackage{breqn}
+
+\usepackage{bbm}
+\usepackage[english]{babel}
+% or whatever
+\usepackage{color,soul}
+\usepackage[utf8]{inputenc}
+% or whatever
+\usepackage{color, colortbl}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\usepackage{xcolor}
+
+
+\newcommand\Wider[2][4em]{%
+\makebox[\linewidth][c]{%
+  \begin{minipage}{\dimexpr\textwidth+#1\relax}
+  \raggedright#2
+  \end{minipage}%
+  }%
+}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{yellow!50}{$\displaystyle#1$}}
+\title[Effects of a Minimum Wage Increase on Restaurants] % (optional, use only with long paper titles)
+{\large Minimum Wage Project: \\ Means and Results}
+
+%\subtitle
+%{Include Only If Paper Has a Subtitle}
+
+\author[Chelsea Crain] % (optional, use only with lots of authors)
+{}
+% - Give the names in the same order as the appear in the paper.
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[] % (optional, but mostly needed)
+
+
+\date % (optional, should be abbreviation of conference name)
+{Chelsea Crain\\
+University of Iowa\\
+\today \\
+
+}
+
+
+
+\begin{document}
+
+
+
+\begin{spacing}{1.2}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{General Pass Through Geo}
+\Wider{
+\centering
+\tiny
+\input{main_regs.tex}
+}
+\end{frame}
+
+\begin{frame}{General Pass Through Geo}
+\Wider{
+\centering
+\tiny
+\input{yelp_rest_chars_regs.tex}
+}
+\end{frame}
+
+\begin{frame}{Pass Through: Rest Chars Yelp Geo}
+\Wider{
+\centering
+\tiny
+\input{yelp_regs_restcats.tex}
+}
+\end{frame}
+
+
+\begin{frame}{General Pass Through Yelp Geo}
+\Wider{
+\centering
+\tiny
+\input{yelp_rest_regs.tex}
+}
+\end{frame}
+
+
+\begin{frame}{General Pass Through RUSA}
+\Wider{
+\centering
+\tiny
+\input{pass_through_rest_regs_RUSA.tex}
+}
+\end{frame}
+
+
+\begin{frame}{Pass Through: Rest Chars Yelp RUSA}
+\Wider{
+\centering
+\tiny
+\input{yelp_regs_restcats_RUSA.tex}
+}
+\end{frame}
+
+\begin{frame}{Pass Through: Item Chars GH Geo}
+\Wider{
+\centering
+\tiny
+\input{gh_item_regs_cats.tex}
+}
+\end{frame}
+
+\begin{frame}{Pass Through: Item Chars GH RUSA}
+\Wider{
+\centering
+\tiny
+\input{gh_item_regs_cats_RUSA.tex}
+}
+\end{frame}
+
+\begin{frame}{Quality Regs: Yelp Geo}
+\Wider{
+\centering
+\tiny
+\input{quality_regs.tex}
+}
+\end{frame}
+
+\begin{frame}{Quality Regs: Yelp RUSA}
+\Wider{
+\centering
+\tiny
+\input{quality_regs_RUSA.tex}
+}
+\end{frame}
+
+\begin{frame}{Yelp Dist Graphic}
+\centering
+\tiny
+\includegraphics[scale=.75]{distance_yelp.pdf}
+\end{frame}
+
+\begin{frame}{Yelp Dist Regs}
+\Wider{
+\centering
+\tiny
+\input{yelp_dist_regs.tex}
+}
+\end{frame}
+
+\begin{frame}{GH Dist Graphic}
+\centering
+\tiny
+\includegraphics[scale=.75]{gh_dist.pdf}
+\end{frame}
+
+
+\begin{frame}{GH Dist Regs}
+\Wider{
+\centering
+\tiny
+\input{dist_item_regs_gh.tex}
+}
+\end{frame}
+
+\begin{frame}{Yelp Non Price Geo}
+\Wider{
+\centering
+\tiny
+\input{non_pr_regs.tex}
+}
+\end{frame}
+
+\begin{frame}{Yelp Non Price RUSA}
+\Wider{
+\centering
+\tiny
+\input{non_pr_regs_RUSA.tex}
+}
+\end{frame}
+
+
+\begin{frame}{Yelp Means: Percent Change}
+\Wider{
+\centering
+\tiny
+\input{means_items_yelp.tex}
+}
+\end{frame}
+
+\begin{frame}{Yelp Change $ln(p)$ Density: Outliers?}
+\Wider{
+\centering
+\tiny
+\includegraphics[width=3in]{ch_lnp_dens.pdf}
+}
+\end{frame}
+
+\begin{frame}{Eat24 Means: Percent Change}
+\Wider{
+\centering
+\tiny
+\input{means_items_eat24.tex}
+}
+\end{frame}
+
+
+\begin{frame}{Geocoded Yelp Means: Percent Change}
+\Wider{
+\centering
+\tiny
+\input{means_items_yelp_geo.tex}
+}
+\end{frame}
+
+
+\begin{frame}{Grubhub Means: Percent Change}
+\centering
+\tiny
+\input{means_items_gh.tex}
+
+\end{frame}
+
+\begin{frame}{Grubhub Geocoded Means: Percent Change}
+\centering
+\tiny
+\input{means_items_gh_geo.tex}
+
+\end{frame}
+
+\begin{frame}{Grubhub Geocoded Means Rest Level: Percent Change}
+\centering
+\tiny
+\input{means_rest_gh_geo.tex}
+
+\end{frame}
+
+\begin{frame}{Quality Means: Yelp}
+\centering
+\tiny
+\input{quality_means_rest_yelp.tex}
+
+\end{frame}
+
+\begin{frame}{Yelp: Price Pass Through of a 10$\%$ MW Increase}
+\Wider{
+
+\centering
+\tiny
+\input{item_regs_yelp.tex}
+}
+
+\footnotesize
+\begin{dmath}
+\Delta \ln p_{ijkt} = \sum_{h=0}^{2}w_h \Delta \ln mw_{kt-h}  + \boldsymbol{X}_j \boldsymbol{\lambda} + \epsilon_k + \epsilon_t + \epsilon_{ijkt}
+\end{dmath}
+
+\end{frame}
+
+\begin{frame}{Yelp Rests: Price Pass Through of a 10$\%$ MW Increase}
+\Wider{
+\centering
+\tiny
+\input{yelp_rest_regs.tex}
+}
+\end{frame}
+
+\begin{frame}{Grubhub: Price Pass Through of a 10$\%$ MW Increase}
+\Wider{
+\centering
+\tiny
+\input{item_regs_gh.tex}
+}
+\end{frame}
+
+\begin{frame}{Grubhub Rest: Price Pass Through of a 10$\%$ MW Increase}
+\Wider{
+\centering
+\tiny
+\input{gh_rest_regs.tex}
+}
+\end{frame}
+
+\begin{frame}{Grubhub Rest: Price Pass Through of a 10$\%$ MW Increase}
+\Wider{
+\centering
+\tiny
+\input{gh_item_regs_cats.tex}
+}
+\end{frame}
+
+\begin{frame}{Yelp Rest: Price Pass Through of a 10$\%$ MW Increase}
+\Wider{
+\centering
+\tiny
+\input{yelp_regs_restcats.tex}
+}
+\end{frame}
+
+\begin{frame}{Grubhub Item: Price Pass Through of a 10$\%$ MW Increase}
+\Wider{
+\centering
+\tiny
+\input{gh_rest_regs_restcats_gh.tex}
+}
+\end{frame}
+
+\begin{frame}{Yelp: Changes in Quality}
+\Wider{
+\centering
+\tiny
+\input{quality_regs.tex}
+}
+\end{frame}
+
+
+
+\begin{frame}{Yelp: Border Effects}
+\Wider{
+\centering
+\tiny
+\input{dist_item_regs.tex}
+}
+
+\small
+$$
+\begin{aligned}
+\Delta \ln (p_{ij,Feb-Oct})  = & \alpha_0 + \alpha_1  \mathbbm{1}(NY=1)  \\
+& + \alpha_2 D_{j} + \alpha_3[D_j * \mathbbm{1}(NY=1)]  \\
+& +\gamma X_{ij}  + \epsilon_{ij} 
+\end{aligned}
+$$
+\end{frame}
+
+\begin{frame}{Yelp: Border Effects}
+\tiny
+\input{yelp_dist_regs.tex}
+\end{frame}
+
+
+\begin{frame}{Grubhub: Border Effects}
+\tiny
+\input{dist_item_regs_gh.tex}
+\end{frame}
+
+\end{spacing}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

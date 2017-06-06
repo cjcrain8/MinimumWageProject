@@ -1,0 +1,34 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         &\multicolumn{1}{c}{(5)}         &\multicolumn{1}{c}{(6)}         &\multicolumn{1}{c}{(7)}         &\multicolumn{1}{c}{(8)}         \\
+                    &        Yelp         &      Cntrls         &      Change         &       Eat24         &        Both         &          GH         &      Cntrls         &        Both         \\
+\hline
+ $ Jul-Oct $        &      0.0839         &      0.0229         &       0.378         &       0.313         &     -0.0756         &                     &                     &                     \\
+                    &    (0.0403)         &    (0.0670)         &     (0.178)         &     (0.212)         &     (0.216)         &                     &                     &                     \\
+[1em]
+ $ Oct-Jan $        &       0.171\sym{**} &       0.185\sym{**} &       0.668\sym{**} &       0.326\sym{**} &      -0.170         &                     &                     &                     \\
+                    &    (0.0335)         &    (0.0638)         &     (0.198)         &     (0.114)         &     (0.171)         &                     &                     &                     \\
+[1em]
+ $ Jan-Apr $        &       0.162\sym{**} &       0.148\sym{*}  &       0.556\sym{*}  &       0.272         &       0.380         &                     &                     &                     \\
+                    &    (0.0344)         &    (0.0592)         &     (0.202)         &     (0.183)         &     (0.188)         &                     &                     &                     \\
+[1em]
+ $ Dec-Jan $        &                     &                     &                     &                     &                     &       0.260\sym{***}&       0.271\sym{***}&       0.201\sym{**} \\
+                    &                     &                     &                     &                     &                     &    (0.0103)         &   (0.00748)         &    (0.0273)         \\
+[1em]
+ $ Jan-Feb $        &                     &                     &                     &                     &                     &       0.245\sym{**} &       0.293\sym{***}&       0.130\sym{**} \\
+                    &                     &                     &                     &                     &                     &    (0.0418)         &    (0.0278)         &    (0.0399)         \\
+[1em]
+ $ Feb-Mar $        &                     &                     &                     &                     &                     &       0.244\sym{***}&       0.295\sym{***}&       0.211\sym{**} \\
+                    &                     &                     &                     &                     &                     &    (0.0224)         &    (0.0153)         &    (0.0324)         \\
+[1em]
+ $ Mar-Apr $        &                     &                     &                     &                     &                     &       0.162\sym{***}&       0.161\sym{**} &     -0.0693         \\
+                    &                     &                     &                     &                     &                     &    (0.0132)         &    (0.0228)         &    (0.0439)         \\
+\hline
+Observations        &       35220         &       21028         &        8396         &        9076         &        4368         &       14612         &       11040         &        2920         \\
+\hline\hline
+\multicolumn{9}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{9}{l}{\footnotesize \sym{*} \(p<.10\), \sym{**} \(p<.05\), \sym{***} \(p<.001\)}\\
+\end{tabular}
+}

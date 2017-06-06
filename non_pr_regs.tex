@@ -1,19 +1,19 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{3}{c}}
+\begin{tabular}{l*{10}{c}}
 \hline\hline
-%                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
-                    &\multicolumn{1}{c}{Hours}&\multicolumn{1}{c}{Days}&\multicolumn{1}{c}{Total Items}\\
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}&\multicolumn{1}{c}{(9)}&\multicolumn{1}{c}{(10)}\\
+                    &\multicolumn{1}{c}{Hours}&\multicolumn{1}{c}{Days}&\multicolumn{1}{c}{Total Items}&\multicolumn{1}{c}{est4}&\multicolumn{1}{c}{est5}&\multicolumn{1}{c}{est6}&\multicolumn{1}{c}{est7}&\multicolumn{1}{c}{est8}&\multicolumn{1}{c}{est9}&\multicolumn{1}{c}{est10}\\
 \hline
-$\Delta Ln(mw_{kt})$  &      -0.510         &     -0.0110         &      -3.426         \\
-                    &     (0.706)         &    (0.0238)         &     (2.092)         \\
+$ Oct-Jan $         &       0.194\sym{**} &       0.244         &       0.152         &      0.0533         &       0.300\sym{*}  &     -0.0522         &    -0.00759         &     -0.0907\sym{**} &    -0.00108         &     -0.0754         \\
+                    &    (0.0709)         &     (0.133)         &     (0.105)         &     (0.110)         &     (0.143)         &    (0.0304)         &    (0.0469)         &    (0.0342)         &    (0.0520)         &    (0.0755)         \\
 [1em]
-$\Delta Ln(mw_{kt-1})$&     -0.0243         &     -0.0137         &      -7.295\sym{*}  \\
-                    &     (0.897)         &    (0.0168)         &     (2.743)         \\
+$ Jan-Apr $         &      0.0929\sym{**} &       0.158         &      0.0380         &      0.0884         &      0.0846         &     -0.0413         &     -0.0714         &     -0.0154         &      0.0247         &     -0.0677         \\
+                    &    (0.0327)         &     (0.157)         &    (0.0939)         &    (0.0536)         &    (0.0887)         &    (0.0373)         &    (0.0385)         &    (0.0530)         &    (0.0536)         &    (0.0542)         \\
 \hline
-Observations        &       19373         &       19373         &       23217         \\
+Observations        &       31372         &       14612         &       16760         &       11148         &       20224         &       31372         &       14612         &       16760         &       11148         &       20224         \\
 \hline\hline
-%\multicolumn{4}{l}{\footnotesize Standard errors in parentheses}\\
-%\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\multicolumn{11}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{11}{l}{\footnotesize \sym{*} \(p<.10\), \sym{**} \(p<.05\), \sym{***} \(p<.001\)}\\
 \end{tabular}
 }

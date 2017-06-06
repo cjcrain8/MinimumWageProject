@@ -1,0 +1,25 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{7}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}\\
+                    &\multicolumn{1}{c}{Popular}&\multicolumn{1}{c}{Side}&\multicolumn{1}{c}{Sandwich}&\multicolumn{1}{c}{Pizza}&\multicolumn{1}{c}{Entre}&\multicolumn{1}{c}{Desert}&\multicolumn{1}{c}{Drink}\\
+\hline
+$ Dec-Jan $         &       0.179\sym{***}&       0.165\sym{***}&       0.210\sym{***}&       0.141\sym{*}  &       0.147\sym{***}&       0.126\sym{**} &       0.166\sym{***}\\
+                    &   (0.00429)         &    (0.0132)         &   (0.00441)         &    (0.0523)         &   (0.00221)         &    (0.0162)         &   (0.00343)         \\
+[1em]
+ $ Jan-Feb $        &       0.231\sym{***}&       0.200\sym{**} &       0.220\sym{***}&       0.182\sym{**} &       0.155\sym{***}&       0.114\sym{**} &       0.211\sym{**} \\
+                    &   (0.00339)         &    (0.0530)         &   (0.00548)         &    (0.0366)         &    (0.0132)         &    (0.0224)         &    (0.0290)         \\
+[1em]
+ $ Feb-Mar $        &       0.143\sym{***}&       0.260\sym{***}&       0.231\sym{***}&       0.162         &      0.0504\sym{**} &       0.102\sym{**} &      0.0354         \\
+                    &    (0.0145)         &    (0.0189)         &    (0.0141)         &     (0.141)         &   (0.00604)         &    (0.0228)         &    (0.0409)         \\
+[1em]
+ $ Mar-April $      &      0.0631\sym{**} &      0.0670\sym{**} &      0.0245         &      -0.149\sym{**} &      0.0129         &      0.0142         &    -0.00191         \\
+                    &    (0.0150)         &    (0.0168)         &    (0.0369)         &    (0.0364)         &   (0.00714)         &    (0.0241)         &    (0.0178)         \\
+\hline
+Observations        &       95389         &      212921         &      227011         &       83246         &      324712         &       39854         &      127038         \\
+\hline\hline
+\multicolumn{8}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{8}{l}{\footnotesize \sym{*} \(p<.10\), \sym{**} \(p<.05\), \sym{***} \(p<.001\)}\\
+\end{tabular}
+}
