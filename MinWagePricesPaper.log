@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.27)  6 JUN 2017 09:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.27)  3 JUL 2017 16:30
 entering extended mode
 **./MinWagePricesPaper.tex
 (MinWagePricesPaper.tex
@@ -565,18 +565,18 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 (MinWagePricesPaper.aux)
 \openout1 = `MinWagePricesPaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 (C:\Users\Chelsea\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -674,42 +674,48 @@ LaTeX Info: Redefining \BHBI on input line 130.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for U+msa on input line 62.
+LaTeX Font Info:    Try loading font information for U+msa on input line 65.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 62.
+LaTeX Font Info:    Try loading font information for U+msb on input line 65.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 62.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 65.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
  [1
 
-{C:/Users/Chelsea/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+{C:/Users/Chelsea/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [3]
-
-LaTeX Warning: Citation `neumark2006minimum' undefined on input line 89.
-
-[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 278.
+ [2]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+ [3] [4] [5]
+[6] [7] [8] [9] [10] [11]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+ [12] [13]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 219.
 
 (C:\Users\Chelsea\AppData\Roaming\MiKTeX\2.9\tex\latex\bbm\ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [15]
-[16] [17] [18] (MinWagePricesPaper.bbl
+) [14]
+[15]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+ [16] [17] (MinWagePricesPaper.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -717,83 +723,80 @@ Missing character: There is no â in font cmti10!
 Missing character: There is no € in font cmti10!
 Missing character: There is no ™ in font cmti10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--336
+Underfull \hbox (badness 10000) in paragraph at lines 353--363
 []\OT1/cmr/m/n/10.95 New York State De-part-ment of La-bor.  (2015).  \OT1/cmr/
 m/it/10.95 Min-i-mum wage in-for-ma-tion.
  []
 
-[19]) [20] <map_yelp.pdf, id=83, 466.99335pt x 289.08pt>
-File: map_yelp.pdf Graphic file (type pdf)
- <use map_yelp.pdf>
-Package pdftex.def Info: map_yelp.pdf used on input line 326.
-(pdftex.def)             Requested size: 466.9922pt x 289.07928pt.
+[18]) [19] <full_yelp_map.png, id=82, 847.165pt x 612.2875pt>
+File: full_yelp_map.png Graphic file (type png)
 
-<stars_lfits.pdf, id=84, 397.485pt x 289.08pt>
-File: stars_lfits.pdf Graphic file (type pdf)
- <use stars_lfits.pdf>
-Package pdftex.def Info: stars_lfits.pdf used on input line 334.
-(pdftex.def)             Requested size: 298.113pt x 216.80946pt.
- [21 <./map_yelp.pdf>] <gh_dist.pdf, id=91, 397.485pt x 289.08pt>
+<use full_yelp_map.png>
+Package pdftex.def Info: full_yelp_map.png used on input line 273.
+(pdftex.def)             Requested size: 433.62pt x 313.39296pt.
+ [20 <./full_yelp_map.png (PNG copy)>]
+<nynj.png, id=86, 759.83875pt x 625.33624pt>
+File: nynj.png Graphic file (type png)
+ <use nynj.png>
+Package pdftex.def Info: nynj.png used on input line 285.
+(pdftex.def)             Requested size: 433.62pt x 356.8652pt.
+
+<qualitybars.pdf, id=87, 397.485pt x 289.08pt>
+File: qualitybars.pdf Graphic file (type pdf)
+ <use qualitybars.pdf>
+Package pdftex.def Info: qualitybars.pdf used on input line 293.
+(pdftex.def)             Requested size: 361.34999pt x 262.80736pt.
+ [21 <./nynj.png (PNG copy)>] [22 <./qualitybars.pdf>]
+<gh_dist.pdf, id=96, 397.485pt x 289.08pt>
 File: gh_dist.pdf Graphic file (type pdf)
  <use gh_dist.pdf>
-Package pdftex.def Info: gh_dist.pdf used on input line 342.
+Package pdftex.def Info: gh_dist.pdf used on input line 308.
 (pdftex.def)             Requested size: 298.113pt x 216.80946pt.
-
-[22 <./stars_lfits.pdf> <./gh_dist.pdf>] (sum_stats_yelp.tex) [23]
-(sum_stats_gh.tex) [24] [25] (main_regs.tex) [26] (yelp_rest_chars_regs.tex)
-[27] (gh_itemcat_regs.tex) [28] (quality_regs.tex
-Overfull \hbox (8.47182pt too wide) in paragraph at lines 2--17
- [] 
- []
-
-) [29
-
-
-
-
-
-] (dist_regs.tex
-Overfull \hbox (2.30292pt too wide) in paragraph at lines 2--16
+ [23 <./gh_dist.pdf>] (sum_stats_yelp.tex) (sum_stats_gh.tex) (main_regs.tex)
+(yelp_rest_chars_regs.tex) [24] [25] [26] [27] [28] (gh_itemcat_regs.tex
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+)
+[29] (quality_regs.tex) (dist_regs.tex
+Overfull \hbox (2.30292pt too wide) in paragraph at lines 2--18
  [] 
  []
 
 ) [30
 
-] [31] (MinWagePricesPaper.aux)
 
-LaTeX Warning: There were undefined references.
-
- ) 
+] (MinWagePricesPaper.aux) ) 
 Here is how much of TeX's memory you used:
- 13304 strings out of 493335
- 229951 string characters out of 3136674
- 382668 words of memory out of 3000000
- 16636 multiletter control sequences out of 15000+200000
- 17530 words of font info for 67 fonts, out of 3000000 for 9000
+ 13315 strings out of 493335
+ 230112 string characters out of 3136674
+ 403361 words of memory out of 3000000
+ 16644 multiletter control sequences out of 15000+200000
+ 17663 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,16n,43p,10392b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Chelsea\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\bbm\dpi657
-\bbm10.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on MinWagePricesPaper.pdf (31 pages, 1026151 bytes).
+ 38i,16n,43p,10392b,322s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Chelsea\AppData\Local\MiKTeX\2.9\fonts\p
+k\ljfour\public\bbm\dpi657\bbm10.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmib10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on MinWagePricesPaper.pdf (30 pages, 1236848 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 188 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -313,6 +313,33 @@ Manning, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Neumark%
+\ \BBA {} Wascher%
+}{%
+Neumark%
+\ \BBA {} Wascher%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+neumark2006minimum}
+\APACinsertmetastar {%
+neumark2006minimum}%
+\begin{APACrefauthors}%
+Neumark, D.%
+\BCBT {}\ \BBA {} Wascher, W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+\APACrefbtitle {Minimum wages and employment: A review of evidence from the new
+  minimum wage research} {Minimum wages and employment: A review of evidence
+  from the new minimum wage research}\ \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{}{National Bureau of Economic Research}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 {New York State Department of Labor}%
 }{%
 {New York State Department of Labor}%

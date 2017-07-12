@@ -1,0 +1,39 @@
+\documentclass[11pt]{article}
+
+\usepackage{blindtext}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage[hang]{footmisc}
+\usepackage{lipsum}
+ \usepackage[flushleft]{threeparttable}
+ \usepackage{tabularx} 
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+%\pagestyle{headings}
+%\fancyhf{}
+%\rhead{djfklas}
+%\lhead{dkjfalj}
+%\rfoot{ Page \thepage}
+\usepackage{breqn}
+\usepackage{titlesec}
+\usepackage[labelfont={bf}]{caption}
+%\usepackage{hyperref}
+\usepackage{setspace}
+\interfootnotelinepenalty=10000
+\usepackage{arydshln}
+\usepackage{rotating}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{changepage}
+\usepackage{pdflscape}
+\newcommand{\etal}{\textit{et al}. }
+\doublespacing
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\rfoot{ Page \thepage}

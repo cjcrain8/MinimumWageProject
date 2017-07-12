@@ -1,0 +1,31 @@
+StataFileTM:00001:01100:GREC:                          :
+00003:00003:00001:
+*! classname: bygraph_g
+*! family: by
+*! date: 12 Jun 2017
+*! time: 15:38:33
+*! graph_scheme: s1mono
+*! naturallywhite: 1
+*! end
+
+// File created by Graph Editor Recorder.
+// Edit only if you know what you are doing.
+
+.plotregion1.subtitle[1].text = {}
+.plotregion1.subtitle[1].text.Arrpush Stars=3
+// subtitle[1] edits
+
+.plotregion1.subtitle[2].text = {}
+.plotregion1.subtitle[2].text.Arrpush Stars=3.5
+// subtitle[2] edits
+
+.plotregion1.subtitle[3].text = {}
+.plotregion1.subtitle[3].text.Arrpush Stars=4
+// subtitle[3] edits
+
+.plotregion1.subtitle[4].text = {}
+.plotregion1.subtitle[4].text.Arrpush Stars = 4.5
+// subtitle[4] edits
+
+
+// <end>
