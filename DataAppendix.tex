@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \documentclass[11pt]{article}
 
 \usepackage{blindtext}
@@ -98,4 +99,106 @@ Distance & Number of driving minutes & Google API Distance Matricies\\
 
 
 
+=======
+\documentclass[11pt]{article}
+
+\usepackage{blindtext}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr}
+\usepackage[margin=.8in]{geometry}
+\usepackage[hang]{footmisc}
+\usepackage{lipsum}
+ \usepackage[flushleft]{threeparttable}
+ \usepackage{tabularx} 
+\usepackage{apacite}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+%\pagestyle{headings}
+%\fancyhf{}
+%\rhead{djfklas}
+%\lhead{dkjfalj}
+%\rfoot{ Page \thepage}
+\usepackage{breqn}
+\usepackage{titlesec}
+\usepackage[labelfont={bf}]{caption}
+%\usepackage{hyperref}
+\usepackage{setspace}
+\interfootnotelinepenalty=10000
+\usepackage{arydshln}
+\usepackage{rotating}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage{changepage}
+\usepackage{pdflscape}
+\newcommand{\etal}{\textit{et al}. }
+\doublespacing
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+
+\rfoot{ Page \thepage}
+
+\title{A New Angle on the Effects of a  Minimum Wage Increase On Restaurants:  Price Pass Through, Quality Changes, and Border Effects \\
+Data Appendix}
+\author{Chelsea Crain \footnote{Department of Economics, University of Iowa, Iowa City, IA, 52242, \textit{Email: }chelsea-crain@uiowa.edu }  \\ University of Iowa}
+
+\begin{document}
+
+\maketitle
+
+\section{Data Collection}
+
+The webscrape for the Yelp data collection was originally written to collect data for a different project, funded under the National Institute of Diabetes and Digestive And Kidney Diseases of the National Institutes of Health under Award Number R01DK107686. This paper analyzes the effect of the calorie posting aspect of the Affordable Care Act (Frisvold, Courtemanche, and Price, 2017). The specific aim of the project was to determine whether and why the Affordable Care Act (ACA) menu labeling requirement for restaurants impacts obesity by examining changes in consumer behavior and restaurant menus. The areas of interest for this calorie posting project were created based on areas of the U.S. which had already enacted a calorie posting law for restaurants prior the enactment of the ACA. These areas which had already enacted a calorie posting law were defined as the control groups, and the areas which had not yet enacted a calorie posting law and were effected by the ACA requirement were defined as the treatment groups. The control groups included New York City, NY, Philadelphia County, PA, King County, WA, Albany and Schenectady Counties, NY, Montgomery County, MD, and Vermont. The treatment groups included New York City MSA, Philadelphia MSA, Seattle MSA, Washington, DC MSA, Albany, NY MSA and Connecticut, Maine, Massachusetts, New Hampshire, and Rhode Island. The list of areas for data collection was thus based on obtaining a representative sample from these treatment and control groups. 
+
+The webscrape for Yelp and Grubhub work in a similar manner. For both sources, the scrapes iterate through each area of interest, creating a list of the web page links for all restaurants. The same order of areas is used in each wave of data collection. The scrapes then randomize these restaurants and iterate through each location saving the home page and menu page for each restaurant. After each wave of data collection is complete, a parsing program is used to make the restaurant menu data analyzable. The parser iterates through each restaurant that has been scraped and saves the information of interest to a spreadsheet. As noted in the paper for restaurants in the Yelp dataset, only restaurants with a uniform Yelp menu are parsed for analysis. For the round of data collection in April, 2016, the other externally formatted Yelp menus were hand entered to examine restaurant characteristics. Table 1 reports these results, comparing restaurant characteristics from the Yelp formatted menus and the externally formatted menus in April 2016. 
+
+
+\begin{table}[H]\caption{Yelp Formatted - Externally Formatted Restaurat Comparison}
+\begin{center}
+
+\input{means_table.tex}
+\end{center}
+\end{table}
+
+\newpage
+
+\section{Variable Definitions}
+The following table reports the definitions of all variables used in the analysis.
+
+
+\begin{center}
+
+\begin{table}[H]\caption{Variable Definitions}
+\begin{tabular}{l l l} \hline
+Variable Name & Description & Source \\ \hline
+Min Wage Increase & Percent change in minimum wage & State Legislation (See References) \\
+Price & Price in US dollars of menu items  & Online Menus \\
+Change Price & Change in the natural log of the price & Online Menus \\
+Eat24 Restaurant & Indicator for use of the Eat24 Food Delivery Service & Yelp Menus \\
+Sales & Sales volume in units & ReferenceUSA\\
+Employees & Number of employees at a restaurant location & ReferenceUSA  \\
+Limited Service & Defined by NAICS code for classifying businesses & ReferenceUSA \\
+Franchise & Indicator for franchise status of a restaurant location & ReferenceUSA \\
+Yelp Star & Moving average Yelp star rating rounded to the half & Yelp Menus\\
+Distance & Number of driving minutes & Google API Distance Matricies\\
+\end{tabular}
+
+\end{table}
+
+\end{center}
+
+\newpage
+
+\begin{table}[H]\caption{Order Was Accurate}
+\include{gh_accurate.txt}
+\end{table}
+
+
+
+
+
+
+>>>>>>> 9bf80c4d3367c601bceb3268e37dc31cf9116a6c
 \end{document}
