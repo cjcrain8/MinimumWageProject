@@ -1,20 +1,18 @@
 \begin{center}
-\begin{tabular}{lccccc}
-\hline Source & \multicolumn{3}{c}{Yelp} & \multicolumn{2}{c}{Grubhub}\\
- & (1) & (2) & (3) & (4) & (5)\\
-Comparison Area &   NJ    &   NJ    & NYC MSA &   NJ    & NYC MSA\\
-Time Frame & Oct16-Apr17 & Apr16-Oct16 & Oct16-Apr17 & Dec16-Apr17 & Dec16-Apr17\\
-\hline  $ \mathbbm{1}(NY) \quad (\alpha_1) $  & 0.0064 & -0.0064 & 0.0027 & -0.0102 & -0.0134\\
-  & (0.0152) & (0.0116) & (0.0355) & (0.0124) & (0.0128)\\
- Distance $\quad (\alpha_2) $  & -0.0009 & 0.0000 & -0.0010 & -0.0000 & 0.0003\\
-  & (0.0008) & (0.0006) & (0.0009) & (0.0006) & (0.0004)\\
- Distance * $ \mathbbm{1}(NY) \quad (\alpha_3) $  & 0.0020* & 0.0007 & 0.0016 & 0.0019** & 0.0011\\
-  & (0.0011) & (0.0009) & (0.0037) & (0.0009) & (0.0012)\\
- Constant $\quad (\alpha_0) $  & -0.0069 & 0.0041 & -0.0034 & 0.0059 & 0.0137**\\
-  & (0.0134) & (0.0102) & (0.0134) & (0.0101) & (0.0059)\\
-\hline  $ \alpha_2 + \alpha_3 $  & 0.0011* & 0.0007 & 0.0005 & 0.0018*** & 0.0014\\
-  & (0.0008) & (0.0006) & (0.0035) & (0.0007) & (0.0011)\\
-\hline  $ N $  & 1002 & 1002 & 522 & 694 & 231\\
+\begin{tabular}{lccc}
+\hline Source & \multicolumn{2}{c}{Yelp} & Grubhub\\
+ & (1) & (2) & (3)\\
+Time Frame & Oct16-Apr17 & Apr16-Oct16 & Dec16-Apr17\\
+\hline  $ \mathbbm{1}(NY) \quad (\alpha_1) $  & 0.0064 & -0.0064 & -0.0102\\
+  & (0.0152) & (0.0116) & (0.0124)\\
+ Distance $\quad (\alpha_2) $  & -0.0009 & 0.0000 & -0.0000\\
+  & (0.0008) & (0.0006) & (0.0006)\\
+ Distance * $ \mathbbm{1}(NY) \quad (\alpha_3) $  & 0.0020 & 0.0007 & 0.0019\\
+  & (0.0011) & (0.0009) & (0.0009)\\
+ Constant $\quad (\alpha_0) $  & -0.0069 & 0.0041 & 0.0059\\
+  & (0.0134) & (0.0102) & (0.0101)\\
+\hline  $ \alpha_2 + \alpha_3 $  & 0.0011 & 0.0007 & 0.0018\\
+  & (0.0008) & (0.0006) & (0.0007)\\
+\hline  $ N $  & 1002 & 1002 & 694\\
 \hline\end{tabular}\\
-\begin{tiny}\ * $p<0$.1; ** $p<0$.05; *** $p<0$.01\end{tiny}\\
 \end{center}
